@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "@material-ui/core";
 
 import youtube from "./api/youtube";
@@ -21,6 +21,16 @@ const App = () => {
     setSelectedVideo(response.data.items[0]);
   };
 
+  const onVideoSelect = (
+    video:
+      | any
+      | { snippet: { thumbnails: { medium: { url: string } }; title: string } }
+  ) => setSelectedVideo(video);
+
+  useEffect(() => {
+    handleSubmit("javascript");
+  }, []);
+
   return (
     <Grid style={{ justifyContent: "center" }} container spacing={10}>
       <Grid item xs={11}>
@@ -32,7 +42,7 @@ const App = () => {
             <VideoDetail video={selectedVideo} />
           </Grid>
           <Grid item xs={4}>
-            <VideoList />
+            <VideoList videos={videos} onVideoSelect={onVideoSelect} />
           </Grid>
         </Grid>
       </Grid>

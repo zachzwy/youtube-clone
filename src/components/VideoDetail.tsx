@@ -5,7 +5,7 @@ const VideoDetail = ({
   video
 }: {
   video: {
-    id: string;
+    id: { videoId: string };
     snippet: { title: string; channelTitle: string; description: string };
   };
 }) => {
