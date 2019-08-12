@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 
 import youtube from "./api/youtube";
 import { SearchBar, VideoDetail, VideoList } from "./components";
+import "./App.scss";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
