@@ -10,7 +10,7 @@ const VideoList = ({
   videos: Object[];
   onVideoSelect: Function;
 }) => (
-  <Grid container spacing={10}>
+  <Grid container spacing={5}>
     {videos.map((video, i) => (
       <VideoItem key={i} video={video} onVideoSelect={onVideoSelect} />
     ))}

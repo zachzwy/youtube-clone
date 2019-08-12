@@ -16,11 +16,11 @@ const VideoItem = ({
       onClick={() => onVideoSelect(video)}
     >
       <img
-        style={{ marginRight: "20px" }}
+        style={{ marginRight: "20px", width: "60%" }}
         alt="thumbnail"
         src={video.snippet.thumbnails.medium.url}
       />
-      <Typography variant="subtitle1">
+      <Typography variant="subtitle2">
         <b>{video.snippet.title}</b>
       </Typography>
     </Paper>
