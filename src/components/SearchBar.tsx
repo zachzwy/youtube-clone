@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react";
+import React, { createRef } from "react";
 import { Paper, TextField } from "@material-ui/core";
 
 const SearchBar = ({ onFormSubmit }: { onFormSubmit: Function }) => {
